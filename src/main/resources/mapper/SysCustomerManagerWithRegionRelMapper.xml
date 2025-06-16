@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyf.springboot0616.mapper.SysCustomerManagerWithRegionRelMapper">
+
+    <resultMap id="BaseResultMap" type="com.zyf.springboot0616.entity.SysCustomerManagerWithRegionRel">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="user_number" column="user_number" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="area_code" column="area_code" jdbcType="VARCHAR"/>
+            <result property="management_area_type" column="management_area_type" jdbcType="VARCHAR"/>
+            <result property="customers_nums" column="customers_nums" jdbcType="BIGINT"/>
+            <result property="personal_loan_balance" column="personal_loan_balance" jdbcType="DECIMAL"/>
+            <result property="corporate_loans_balance" column="corporate_loans_balance" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_number,name,
+        area_code,management_area_type,customers_nums,
+        personal_loan_balance,corporate_loans_balance
+    </sql>
+</mapper>

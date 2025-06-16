@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyf.springboot0616.mapper.SysCustomerManagerGradeInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.zyf.springboot0616.entity.SysCustomerManagerGradeInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="client_manager_grade_information_number" column="client_manager_grade_information_number" jdbcType="VARCHAR"/>
+            <result property="customer_manager_grade" column="customer_manager_grade" jdbcType="VARCHAR"/>
+            <result property="personal_loan_limit" column="personal_loan_limit" jdbcType="DECIMAL"/>
+            <result property="corporate_credit_limit" column="corporate_credit_limit" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,client_manager_grade_information_number,customer_manager_grade,
+        personal_loan_limit,corporate_credit_limit
+    </sql>
+</mapper>
