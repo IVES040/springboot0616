@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 @SpringBootTest
 class Springboot0616ApplicationTests {
     @Autowired
@@ -19,7 +21,8 @@ class Springboot0616ApplicationTests {
         sysCustomerGradeProductRel.setPersonal_credit_limit(1000);
         sysCustomerGradeProductRel.setCorporate_credit_limit(100000);
         sysCustomerGradeProductRel.setProduct_number("0616");
-        sysCustomerGradeProductRelService.save(sysCustomerGradeProductRel);
+        boolean result = sysCustomerGradeProductRelService.save(sysCustomerGradeProductRel);
+        assertTrue(result, "保存成功");
 
 
     }
